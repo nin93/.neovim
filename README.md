@@ -1,8 +1,8 @@
-# AstroNvim Template
+# .neovim
 
-**NOTE:** This is for AstroNvim v4+
+An [AstroNvim](https://github.com/AstroNvim/AstroNvim) v4+ based Neovim configuration.
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+<img src="assets/neovim-dashboard.png" />
 
 ## 🛠️ Installation
 
