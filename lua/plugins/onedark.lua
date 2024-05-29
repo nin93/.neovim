@@ -6,7 +6,7 @@ return {
   opts = {
     colors = {
       dark = {
-        bg = "#171717",
+        bg = "NONE",
       },
     },
     styles = {
