@@ -13,7 +13,7 @@ return {
       c.bg = "#151515"
       c.bg_dark = "#151515"
       c.bg_float = "#151515"
-      c.bg_highlight = "#171717"
+      c.bg_highlight = "#191919"
       c.bg_popup = "#191919"
       c.bg_search = "#191919"
       c.bg_sidebar = "#151515"
