@@ -29,7 +29,7 @@ return {
       c.blue7 = "#394b70"
       c.border = "#252525"
       c.border_highlight = "#353535"
-      c.comment = "#565f89"
+      c.comment = "#454545"
       c.cyan = "#7dcfff"
       c.dark3 = "#545c7e"
       c.dark5 = "#737aa2"
