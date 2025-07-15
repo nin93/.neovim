@@ -77,9 +77,9 @@ return {
       sections = {
         {
           section = "terminal",
-          cmd = "pokeget --hide-name darkrai; sleep .1",
-          height = 14,
-          indent = 15,
+          cmd = "pokeget --hide-name gengar --shiny; sleep .1",
+          height = 18,
+          indent = 12,
           ttl = 86400,
           padding = 2,
         },
