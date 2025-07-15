@@ -37,9 +37,19 @@ local pick_directories = function()
     confirm = function(picker, item)
       picker:close()
 
-      Snacks.picker.pick("files", {
-        dirs = { item.file },
-      })
+      local dir = Snacks.git.get_root(item.file)
+
+      if dir then
+        vim.fn.chdir(dir)
+
+        Snacks.picker.pick("files", {
+          dirs = { vim.fn.getcwd() },
+        })
+      else
+        Snacks.picker.pick("files", {
+          dirs = { item.file },
+        })
+      end
     end,
   }
 end
