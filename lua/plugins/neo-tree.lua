@@ -26,9 +26,6 @@ return {
         last_indent_marker = " ",
         -- expander config, needed for nesting files
         with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
-        expander_collapsed = "",
-        expander_expanded = "",
-        expander_highlight = "NeoTreeExpander",
       },
       icon = {
         folder_closed = "󰉋",
@@ -37,7 +34,6 @@ return {
         folder_empty_open = "󰉋",
         -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
         -- then these will never be used.
-        default = "󰈔",
       },
       git_status = {
         symbols = {
