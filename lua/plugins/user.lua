@@ -1,17 +1,5 @@
-local highlights = require "plugins.highlights"
-
 ---@type LazySpec
 return {
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require("lsp_signature").setup() end,
-  -- },
-
-  -- == Examples of Overriding Plugins ==
-
-  -- customize alpha options
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
@@ -46,7 +34,11 @@ return {
       }
 
       local hl = {
-        { { "Pixel_0_21", 21, 24 }, { "Pixel_0_24", 24, 27 }, { "Pixel_0_27", 27, 30 } },
+        {
+          { "Pixel_0_21", 21, 24 },
+          { "Pixel_0_24", 24, 27 },
+          { "Pixel_0_27", 27, 30 },
+        },
         {
           { "Pixel_1_0", 0, 3 },
           { "Pixel_1_3", 3, 6 },
@@ -666,6 +658,7 @@ return {
     "s1n7ax/nvim-window-picker",
     opts = function(_, opts)
       opts.hint = "floating-big-letter"
+
       return opts
     end,
   },
@@ -689,6 +682,7 @@ return {
       local npairs = require "nvim-autopairs"
       local Rule = require "nvim-autopairs.rule"
       local cond = require "nvim-autopairs.conds"
+
       npairs.add_rules(
         {
           Rule("$", "$", { "tex", "latex" })
