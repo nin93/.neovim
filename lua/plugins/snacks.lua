@@ -34,6 +34,11 @@ local pick_directories = function()
 
       return items
     end,
+    format = function(item, _)
+      local icon, icon_hl = Snacks.util.icon(item.file.ft, "directory")
+
+      return { { icon, icon_hl }, { item.file } }
+    end,
     confirm = function(picker, item)
       picker:close()
 
