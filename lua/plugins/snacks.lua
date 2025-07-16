@@ -63,7 +63,17 @@ return {
   "folke/snacks.nvim",
   opts = {
     dashboard = {
+      width = 56,
       preset = {
+        header = [[
+ ██████   █████                   █████   █████  ███                 
+░░██████ ░░███                   ░░███   ░░███  ░░░                  
+ ░███░███ ░███   ██████   ██████  ░███    ░███  ████  █████████████  
+ ░███░░███░███  ███░░███ ███░░███ ░███    ░███ ░░███ ░░███░░███░░███ 
+ ░███ ░░██████ ░███████ ░███ ░███ ░░███   ███   ░███  ░███ ░███ ░███ 
+ ░███  ░░█████ ░███░░░  ░███ ░███  ░░░█████░    ░███  ░███ ░███ ░███ 
+ █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████
+░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░ ]],
         keys = {
           { icon = "󰺄 ", key = "p", desc = "Find Projects", action = ":lua Snacks.dashboard.pick('projects')" },
           { icon = "󰥨 ", key = "d", desc = "Find Directory", action = function() pick_directories() end },
@@ -76,34 +86,41 @@ return {
       },
       sections = {
         {
+          section = "header",
+          padding = 1,
+        },
+        {
           section = "terminal",
           cmd = "pokeget --hide-name gengar --shiny; sleep .1",
           height = 18,
           indent = 12,
           ttl = 86400,
-          padding = 2,
+          padding = 1,
         },
         {
           title = "Keymaps",
           section = "keys",
           indent = 2,
-          padding = 2,
+          padding = 1,
         },
         {
           title = "Projects",
           section = "projects",
           indent = 2,
-          padding = 2,
+          padding = 1,
           limit = 7,
         },
         {
           title = "Recent Files",
           section = "recent_files",
           indent = 2,
-          padding = 2,
+          padding = 1,
           limit = 3,
         },
         { section = "startup" },
+      },
+      formats = {
+        header = { "%s", align = "center", hl = "dir" },
       },
     },
   },
