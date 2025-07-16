@@ -4,14 +4,15 @@ return {
   opts = {
     ensure_installed = {
       "lua",
-      "tsx",
       "rust",
       "c",
       "css",
       "gitcommit",
       "markdown",
+      "tsx",
       "typescript",
       "javascript",
+      "json",
       "bash",
     },
   },
