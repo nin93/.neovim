@@ -13,6 +13,16 @@ return {
     -- event = "User AstroGitFile",
   },
 
+  {
+    "s1n7ax/nvim-window-picker",
+    opts = function(_, opts)
+      opts.selection_chars = "1234567890"
+      opts.hint = "floating-big-letter"
+
+      return opts
+    end,
+  },
+
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
     "L3MON4D3/LuaSnip",
