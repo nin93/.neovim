@@ -25,15 +25,15 @@ return {
     -- passed to `vim.filetype.add`
     filetypes = {
       -- see `:h vim.filetype.add` for usage
-      extension = {
-        foo = "fooscript",
-      },
-      filename = {
-        [".foorc"] = "fooscript",
-      },
-      pattern = {
-        [".*/etc/foo/.*"] = "fooscript",
-      },
+      -- extension = {
+      --   foo = "fooscript",
+      -- },
+      -- filename = {
+      --   [".foorc"] = "fooscript",
+      -- },
+      -- pattern = {
+      --   [".*/etc/foo/.*"] = "fooscript",
+      -- },
     },
     -- vim options can be configured here
     options = {
@@ -58,7 +58,7 @@ return {
       n = {
         ["<Leader>c"] = {
           function()
-            local bufs = vim.fn.getbufinfo { buflisted = true }
+            local bufs = vim.fn.getbufinfo { buflisted = 1 }
             require("astrocore.buffer").close(0)
             if not bufs[2] then require("snacks").dashboard() end
           end,
