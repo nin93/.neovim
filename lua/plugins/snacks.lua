@@ -44,17 +44,7 @@ local pick_directories = function()
 
       local dir = Snacks.git.get_root(item.file)
 
-      if dir then
-        vim.fn.chdir(dir)
-
-        Snacks.picker.pick("files", {
-          dirs = { vim.fn.getcwd() },
-        })
-      else
-        Snacks.picker.pick("files", {
-          dirs = { item.file },
-        })
-      end
+      if dir then vim.fn.chdir(dir) end
     end,
   }
 end
