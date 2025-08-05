@@ -71,6 +71,10 @@ return {
         ["<C-n>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
         -- second key is the lefthand side of the map
 
+        ["f"] = { "<cmd>HopWord<cr>", desc = "Jump to word" },
+        ["F"] = { "<cmd>HopChar2<cr>", desc = "Jump to char" },
+        ["L"] = { "<cmd>HopLineStart<cr>", desc = "Jump to line" },
+
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
@@ -84,13 +88,6 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        -- ["<Leader>b"] = { desc = "Buffers" },
-
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
       },
     },
   },

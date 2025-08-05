@@ -14,6 +14,17 @@ return {
   },
 
   {
+    "tpope/vim-repeat",
+    event = "User AstroFile",
+  },
+
+  {
+    "phaazon/hop.nvim",
+    branch = "v2",
+    config = function() require("hop").setup {} end,
+  },
+
+  {
     "s1n7ax/nvim-window-picker",
     opts = function(_, opts)
       opts.selection_chars = "1234567890"
