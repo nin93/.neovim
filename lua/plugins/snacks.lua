@@ -57,13 +57,13 @@ return {
       preset = {
         header = require "plugins.headers.labyrinth",
         keys = {
-          { icon = "󰺄 ", key = "p", desc = "Find Projects", action = ":lua Snacks.dashboard.pick('projects')" },
-          { icon = "󰥨 ", key = "d", desc = "Find Directory", action = function() pick_directories() end },
-          { icon = "󰱼 ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          { icon = "󱎸 ", key = "w", desc = "Find Word", action = ":lua Snacks.dashboard.pick('live_grep')" },
-          { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          { key = "p", desc = "Find Projects", action = ":lua Snacks.dashboard.pick('projects')" },
+          { key = "d", desc = "Find Directory", action = function() pick_directories() end },
+          { key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+          { key = "w", desc = "Find Word", action = ":lua Snacks.dashboard.pick('live_grep')" },
+          { key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          { key = "n", desc = "New File", action = ":ene | startinsert" },
+          { key = "q", desc = "Quit", action = ":qa" },
         },
       },
       sections = {
@@ -94,6 +94,8 @@ return {
       },
       formats = {
         header = { "%s", align = "center" },
+        -- fully disable icons
+        icon = function() return {} end,
       },
     },
   },

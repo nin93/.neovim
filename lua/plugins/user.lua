@@ -1,12 +1,10 @@
 ---@type LazySpec
 return {
-  -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
+  { "nvim-tree/nvim-web-devicons", enabled = false },
+  -- { "echasnovski/mini.icons", enabled = false },
 
-  {
-    "tpope/vim-surround",
-    event = "User AstroFile",
-  },
+  { "tpope/vim-surround", event = "User AstroFile" },
 
   {
     "tpope/vim-fugitive",
