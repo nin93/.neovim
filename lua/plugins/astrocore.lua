@@ -71,23 +71,40 @@ return {
         ["<C-n>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
         -- second key is the lefthand side of the map
 
-        ["f"] = { "<cmd>HopWord<cr>", desc = "Jump to word" },
-        ["F"] = { "<cmd>HopChar2<cr>", desc = "Jump to char" },
-        ["L"] = { "<cmd>HopLineStart<cr>", desc = "Jump to line" },
+        -- remap f motion with Hop
+        ["f"] = { "<cmd>HopChar1CurrentLineAC<cr>" },
+
+        -- remap F motion with Hop
+        ["F"] = { "<cmd>HopChar1CurrentLineBC<cr>" },
+
+        -- remap t motion with Hop
+        ["t"] = {
+          function()
+            require("hop").hint_char1 {
+              direction = require("hop.hint").HintDirection.AFTER_CURSOR,
+              current_line_only = true,
+              hint_offset = -1,
+            }
+          end,
+        },
+
+        -- remap T motion with Hop
+        ["T"] = {
+          function()
+            require("hop").hint_char1 {
+              direction = require("hop.hint").HintDirection.BEFORE_CURSOR,
+              current_line_only = true,
+              hint_offset = -1,
+            }
+          end,
+        },
+
+        -- file motion with Hop
+        ["S"] = { "<cmd>HopPatternMW<cr>", desc = "Jump to pattern" },
 
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bd"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Close buffer from tabline",
-        },
       },
     },
   },
