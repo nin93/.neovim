@@ -6,4 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.typescript" },
 }

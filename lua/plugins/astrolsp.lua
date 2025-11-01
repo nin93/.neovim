@@ -22,13 +22,22 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable ts_ls formatting capability, we will use stylua
+        -- disable lua_ls formatting capability, we will use stylua
         "lua_ls",
         -- disable ts_ls formatting capability, we will use prettier
-        "ts_ls",
+        -- "ts_ls",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 2000, -- default format timeout
     },
+    ---@diagnostic disable: missing-fields
+    -- config = {
+    --   rust_analyzer = {
+    --     checkOnSave = false
+    --   },
+    -- },
+    handlers = {
+      rust_analyzer = false,
+    }, -- Let rustaceanvim setup `rust_analyzer`
     ---@diagnostic disable: missing-fields
     -- customize how language servers are attached
     autocmds = {

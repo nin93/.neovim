@@ -1,12 +1,16 @@
-# AstroNvim Template
+# .neovim
 
-**NOTE:** This is for AstroNvim v5+
+Neovim configuration using AstroNvim v5.
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Dashboard
 
-## 🛠️ Installation
+![Current dashboard setup](./assets/Screenshot_20250811_235615.png)
 
-#### Make a backup of your current nvim and shared folder
+Colorscheme: [ashen](https://www.github.com/ficcdaf/ashen.nvim)
+
+## Installation
+
+### Make a backup of your current nvim and shared folder
 
 ```shell
 mv ~/.config/nvim ~/.config/nvim.bak
@@ -15,19 +19,13 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
 
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
-#### Clone the repository
+### Clone the repository
 
 ```shell
 git clone https://github.com/nin93/.neovim ~/.config/nvim
 ```
 
-#### Start Neovim
+### Start Neovim
 
 ```shell
 nvim
